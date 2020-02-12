@@ -107,7 +107,7 @@ img {
 
 /* fade in image when loaded */
 .carousel-cell-image {
-  transition: opacity 0.4s;
+  transition: opacity .6s;
   opacity: 0; }
 
 .carousel-cell-image.flickity-lazyloaded,
@@ -122,11 +122,11 @@ img {
   background-size: cover; }
 
 .header {
-  -webkit-animation: animate-down ease-in .4s forwards;
-  -moz-animation: animate-down ease-in .4s forwards;
-  -ms-animation: animate-down ease-in .4s forwards;
-  -o-animation: animate-down ease-in .4s forwards;
-  animation: animate-down ease-in .4s forwards; }
+  -webkit-animation: animate-down ease-in-out .6s forwards;
+  -moz-animation: animate-down ease-in-out .6s forwards;
+  -ms-animation: animate-down ease-in-out .6s forwards;
+  -o-animation: animate-down ease-in-out .6s forwards;
+  animation: animate-down ease-in-out .6s forwards; }
 
 @keyframes animate-down {
   0% {
@@ -153,6 +153,38 @@ img {
     top: -200px; }
   100% {
     top: 0; } }
+.footer {
+  -webkit-animation: animate-up ease-in-out .6s forwards;
+  -moz-animation: animate-up ease-in-out .6s forwards;
+  -ms-animation: animate-up ease-in-out .6s forwards;
+  -o-animation: animate-up ease-in-out .6s forwards;
+  animation: animate-up ease-in-out .6s forwards; }
+
+@keyframes animate- {
+  0% {
+    bottom: -200px; }
+  100% {
+    bottom: 0; } }
+@-moz-keyframes animate-up {
+  0% {
+    bottom: -200px; }
+  100% {
+    bottom: 0; } }
+@-webkit-keyframes animate-up {
+  0% {
+    bottom: -200px; }
+  100% {
+    bottom: 0; } }
+@-ms-keyframes animate-up {
+  0% {
+    bottom: -200px; }
+  100% {
+    bottom: 0; } }
+@-o-keyframes animate-up {
+  0% {
+    bottom: -200px; }
+  100% {
+    bottom: 0; } }
 @media (min-width: 776px) {
   .footer-target, .footer, .header-target {
     pointer-events: all; }
