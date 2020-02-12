@@ -121,6 +121,38 @@ img {
   background-position: center bottom;
   background-size: cover; }
 
+.header {
+  -webkit-animation: animate-down ease-in .4s forwards;
+  -moz-animation: animate-down ease-in .4s forwards;
+  -ms-animation: animate-down ease-in .4s forwards;
+  -o-animation: animate-down ease-in .4s forwards;
+  animation: animate-down ease-in .4s forwards; }
+
+@keyframes animate-down {
+  0% {
+    top: -200px; }
+  100% {
+    top: 0; } }
+@-moz-keyframes animate-down {
+  0% {
+    top: -200px; }
+  100% {
+    top: 0; } }
+@-webkit-keyframes animate-down {
+  0% {
+    top: -200px; }
+  100% {
+    top: 0; } }
+@-ms-keyframes animate-down {
+  0% {
+    top: -200px; }
+  100% {
+    top: 0; } }
+@-o-keyframes animate-down {
+  0% {
+    top: -200px; }
+  100% {
+    top: 0; } }
 @media (min-width: 776px) {
   .footer-target, .footer, .header-target {
     pointer-events: all; }
