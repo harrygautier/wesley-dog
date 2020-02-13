@@ -84,6 +84,10 @@
 			</div>
 		</div>
 
+        <div class="hg-link">
+            <p><a href="https://harrygautier.com" rel="noopener">- CRAFTED BY HARRY -</a></p>
+        </div>
+
 
 		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89699287-2"></script>
