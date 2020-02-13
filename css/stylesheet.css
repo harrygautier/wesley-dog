@@ -6,39 +6,61 @@ body {
   margin: 0;
   padding: 0;
   align-content: center;
-  background-color: #1a1a1a;
-  color: #f2f2f2; }
+  background-color: #1a1a1a !important;
+  color: #f2f2f2 !important; }
+
+/* MADE BY HARRY */
+div.hg-link {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3000;
+  pointer-events: none; }
+  div.hg-link p {
+    display: flex;
+    margin: 1em;
+    font-family: monospace;
+    font-weight: 400;
+    pointer-events: all; }
+  div.hg-link a {
+    position: relative;
+    text-decoration: none;
+    color: #f2f2f2 !important;
+    padding-bottom: 6px; }
+  div.hg-link:hover a:after, div.hg-link:active a:after {
+    width: 60%; }
+  div.hg-link a:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 20%;
+    background: #f2f2f2 !important;
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s; }
 
 /*HEADER*/
 a.insta {
-  display: block;
-  vertical-align: middle;
-  margin: auto;
+  display: flex;
   height: 32px;
   width: 32px;
   z-index: 2000;
   pointer-events: all; }
-
-a.insta svg path {
-  z-index: 1500;
-  fill: #f2f2f2; }
-
-a.insta svg:hover path {
-  fill: #f15a24; }
-
-a.insta svg:active path {
-  fill: #933624; }
-
-.header {
-  position: fixed;
-  top: 0;
-  height: auto;
-  width: 100%;
-  padding: 30px 0;
-  text-align: center !important;
-  background-color: rgba(0, 0, 0, 0);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-  z-index: 500; }
+  a.insta svg path {
+    z-index: 1500;
+    fill: #f2f2f2 !important; }
+  a.insta svg:hover path {
+    fill: #f15a24 !important; }
+  a.insta svg:active path {
+    fill: #933624 !important; }
 
 .header-target {
   position: fixed;
@@ -46,27 +68,22 @@ a.insta svg:active path {
   left: 0;
   right: 0;
   height: 110px;
-  z-index: 3000; }
+  z-index: 3000;
+  pointer-events: none; }
+  .header-target .header {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    height: auto;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center !important;
+    background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    z-index: 500; }
 
 /*FOOTER*/
-div.logo {
-  display: block;
-  vertical-align: middle;
-  margin: auto;
-  width: 160px;
-  height: 160px;
-  z-index: 3000; }
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  height: auto;
-  width: 100%;
-  padding: 30px 0;
-  background-color: rgba(0, 0, 0, 0);
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
-  z-index: 500; }
-
 .footer-target {
   position: fixed;
   bottom: 0;
@@ -74,9 +91,23 @@ div.logo {
   right: 0;
   height: 160px;
   z-index: 1000; }
-
-.footer-target, .footer, .header-target {
-  pointer-events: none; }
+  .footer-target, .footer-target .footer {
+    pointer-events: none; }
+  .footer-target .footer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 500; }
+    .footer-target .footer div.logo {
+      display: flex;
+      width: 160px;
+      height: 160px;
+      z-index: 3000; }
 
 /* FLICKITY OPTIONS */
 * {
@@ -88,12 +119,12 @@ div.logo {
   height: 100vh; }
 
 .carousel {
-  background: #141414; }
+  background: #1a1a1a !important; }
 
 .carousel-cell {
   width: 100vw;
   height: 100vh;
-  background: #141414;
+  background: #1a1a1a !important;
   margin: 0;
   padding: 0;
   counter-increment: carousel-cell; }
@@ -160,7 +191,14 @@ img {
   -o-animation: animate-up ease-in-out .6s forwards;
   animation: animate-up ease-in-out .6s forwards; }
 
-@keyframes animate- {
+div.hg-link {
+  -webkit-animation: animate-up ease-in-out .7s forwards;
+  -moz-animation: animate-up ease-in-out .7s forwards;
+  -ms-animation: animate-up ease-in-out .7s forwards;
+  -o-animation: animate-up ease-in-out .7s forwards;
+  animation: animate-up ease-in-out .7s forwards; }
+
+@keyframes animate-up {
   0% {
     bottom: -200px; }
   100% {
@@ -186,37 +224,23 @@ img {
   100% {
     bottom: 0; } }
 @media (min-width: 776px) {
-  .footer-target, .footer, .header-target {
+  .header-target {
     pointer-events: all; }
 
   /*ANIMATIONS*/
   a.insta svg {
-    -webkit-animation: animate-out 0.2s forwards;
-    -moz-animation: animate-out 0.2s forwards;
-    -ms-animation: animate-out 0.2s forwards;
-    -o-animation: animate-out 0.2s forwards;
-    animation: animate-out 0.2s forwards; }
+    -webkit-animation: animate-in 0.2s forwards;
+    -moz-animation: animate-in 0.2s forwards;
+    -ms-animation: animate-in 0.2s forwards;
+    -o-animation: animate-in 0.2s forwards;
+    animation: animate-in 0.2s forwards; }
 
   .header-target:hover .header a.insta svg {
-    -webkit-animation: animate-in 0.4s forwards;
-    -moz-animation: animate-in 0.4s forwards;
-    -ms-animation: animate-in 0.4s forwards;
-    -o-animation: animate-in 0.4s forwards;
-    animation: animate-in 0.4s forwards; }
-
-  div.logo svg {
-    -webkit-animation: animate-out 0.2s forwards;
-    -moz-animation: animate-out 0.2s forwards;
-    -ms-animation: animate-out 0.2s forwards;
-    -o-animation: animate-out 0.2s forwards;
-    animation: animate-out 0.2s forwards; }
-
-  .footer-target:hover .footer div.logo svg {
-    -webkit-animation: animate-in 0.4s forwards;
-    -moz-animation: animate-in 0.4s forwards;
-    -ms-animation: animate-in 0.4s forwards;
-    -o-animation: animate-in 0.4s forwards;
-    animation: animate-in 0.4s forwards; }
+    -webkit-animation: animate-out 0.4s forwards;
+    -moz-animation: animate-out 0.4s forwards;
+    -ms-animation: animate-out 0.4s forwards;
+    -o-animation: animate-out 0.4s forwards;
+    animation: animate-out 0.4s forwards; }
 
   @keyframes animate-in {
     0% {
