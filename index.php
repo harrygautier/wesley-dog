@@ -85,7 +85,7 @@
 		</div>
 
         <div class="hg-link">
-            <p><a href="https://harrygautier.com" rel="noopener">- CRAFTED BY HARRY -</a></p>
+            <p><a href="https://harrygautier.com" target="_blank" rel="noopener">- CRAFTED BY HARRY -</a></p>
         </div>
 
 
@@ -101,9 +101,6 @@
 
 		<!-- Metafizzy | Flickity -->
 		<script src="js/flickity.pkgd.min.js"></script>
-
-		<!-- lazysizes.min.js -->
-		<script src="js/lazysizes.min.js"></script>
 
 		<!--my js-->
 		<script src="js/main.js" type="text/javascript"></script>
